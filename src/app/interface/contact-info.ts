@@ -1,6 +1,6 @@
 export interface ContactInfo {
-  image?: string;
-  id?: number;
-  name?: string;
-  email?: string;
+  image: string;
+  id: string;
+  name: string;
+  email: string;
 }

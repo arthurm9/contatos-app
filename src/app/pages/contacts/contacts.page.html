@@ -1,25 +1,27 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-icon slot="start" (click)="goTo('/home')"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">Informações Adicionais</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card *ngIf="contact">
-    <img [src]="contact.image"/>
+<ion-content [fullscreen]="true" *ngIf="contact">
+  <ion-card>
     <ion-card-header>
-      <ion-card-title>{{ contact.name }}</ion-card-title>
+      <img [src]="contact.image">
     </ion-card-header>
-
     <ion-card-content>
-      <ion-list lines="none">
-        <ion-item>
-          <p> {{ contact.name }} </p>
-          <p> {{ contact.email }} </p>
-          <p> {{ contact.id }} </p>
+      <div>
+        <ion-label>{{ contact.name }}</ion-label>
+        <ion-item lines="none">
+          <ion-label>E-mail: {{ contact.email }}</ion-label>
         </ion-item>
-      </ion-list>
+        <ion-item lines="none">
+          <ion-label>CPF: {{ contact.id }}</ion-label>
+        </ion-item>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

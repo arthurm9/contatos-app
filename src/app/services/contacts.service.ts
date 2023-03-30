@@ -10,7 +10,7 @@ export class ContactsService {
 
   constructor() {}
 
-  setContact(contact:ContactInfo) {
+  setContact(contact: ContactInfo) {
     this.contact = contact;
   }
 
