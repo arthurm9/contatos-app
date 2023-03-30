@@ -2,10 +2,24 @@ ion-thumbnail img {
   border-radius: 50%;
 }
 
-ion-item {
-  padding: 0;
+ion-title {
+  font-weight: 700;
 }
 
-.item-info p {
+ion-label:nth-child(1) {
+  font-size: 16px;
+}
+
+ion-label:nth-child(2) {
+  color: var(--ion-color-medium);
+  opacity: 40%;
   font-size: 12px;
+}
+
+ion-searchbar {
+  --border-radius: 8px;
+}
+
+.profile-icon {
+  margin-right: 14px;
 }

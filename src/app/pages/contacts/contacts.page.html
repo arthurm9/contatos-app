@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Informações Adicionais</ion-title>
+    <ion-title>DADOS ADICIONAIS</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +13,8 @@
       <img [src]="contact.image">
     </ion-card-header>
     <ion-card-content>
-      <div>
-        <ion-label>{{ contact.name }}</ion-label>
+      <div class="contact-info">
+        <ion-card-title> {{ contact.name }} </ion-card-title>
         <ion-item lines="none">
           <ion-label>E-mail: {{ contact.email }}</ion-label>
         </ion-item>
