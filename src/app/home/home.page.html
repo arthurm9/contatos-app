@@ -1,47 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-text-center">
       Contatos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item>
-      <div>
-        <ion-thumbnail>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-        </ion-thumbnail>
-      </div>
-    </ion-item>
-    <ion-item>
-      <div>
-        <ion-thumbnail>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-        </ion-thumbnail>
-      </div>
-    </ion-item>
-    <ion-item>
-      <div>
-        <ion-thumbnail>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-        </ion-thumbnail>
-      </div>
-    </ion-item>
-    <ion-item>
-      <div>
-        <ion-thumbnail>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-        </ion-thumbnail>
-      </div>
-    </ion-item>
-    <ion-item>
-      <div>
-        <ion-thumbnail>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
-        </ion-thumbnail>
-      </div>
-    </ion-item>
-  </ion-list>
+  <ion-item *ngFor="let contact of contactsInfo" (click)="goTo(contact)">
+    <ion-avatar slot="start">
+      <img
+        [src]="contact.image" />
+    </ion-avatar>
+    <div class="item-info">
+      <ion-label>
+        <h2> {{ contact.name }} </h2>
+        <p> {{ contact.email }}</p>
+      </ion-label>
+    </div>
+    <ion-icon slot="end" name="arrow-forward"></ion-icon>
+  </ion-item>
 </ion-content>

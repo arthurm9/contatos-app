@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { ContactsService } from 'src/app/services/contacts.service';
+import { ContactInfo } from '../../interface/contact-info';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contacts',
@@ -10,11 +13,20 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule]
 })
-export class ContactsPage implements OnInit {
 
-  constructor() { }
+export class ContactsPage{
 
-  ngOnInit() {
+  constructor(private contactsService: ContactsService, private router: Router) { }
+
+  public contact!: ContactInfo;
+
+  goTo(route: string) {
+    this.router.navigateByUrl('/home');
   }
 
+  afterCheck() {
+    this.contact = this.contactsService.getContact();
+  }
 }
+
+
