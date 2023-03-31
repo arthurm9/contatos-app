@@ -2,7 +2,45 @@ ion-title {
   font-weight: 700;
 }
 
+ion-label span{
+  font-size: 15px;
+  color: white;
+}
+
 ion-label {
-  color: var(--ion-color-medium);
-  font-size: 14px;
+  color: var(--ion-color-primary);
+  font-size: 17px;
+}
+
+ion-card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+ion-card-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  ion-icon {
+    font-size: 26px;
+  }
 }

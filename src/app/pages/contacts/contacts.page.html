@@ -12,15 +12,16 @@
     <ion-card-header>
       <img [src]="contact.image">
     </ion-card-header>
+    <div class="icons">
+      <ion-icon name="call"></ion-icon>
+      <ion-icon name="mail"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </div>
     <ion-card-content>
       <div class="contact-info">
         <ion-card-title> {{ contact.name }} </ion-card-title>
-        <ion-item lines="none">
-          <ion-label>E-mail: {{ contact.email }}</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-label>CPF: {{ contact.id }}</ion-label>
-        </ion-item>
+        <ion-label>E-mail: <span>{{ contact.email }}</span></ion-label>
+        <ion-label>CPF: <span>{{ contact.id }}</span></ion-label>
       </div>
     </ion-card-content>
   </ion-card>

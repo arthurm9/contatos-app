@@ -23,3 +23,10 @@ ion-searchbar {
 .profile-icon {
   margin-right: 14px;
 }
+
+ion-item {
+  ion-item {
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+  }
+}
