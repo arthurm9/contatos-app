@@ -4,13 +4,14 @@ import { ContactInfo } from '../interface/contact-info';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ContactsService } from '../services/contacts.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule, RouterLink],
 })
 
 export class HomePage {
@@ -46,6 +47,12 @@ export class HomePage {
       name: 'Diego',
       email: 'diego@gmail.com',
       id: '29384000000'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+      name: 'Virginia',
+      email: 'virginia@gmail.com',
+      id: '29382342000'
     },
   ];
 

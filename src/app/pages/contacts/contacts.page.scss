@@ -2,7 +2,7 @@ ion-title {
   font-weight: 700;
 }
 
-ion-label span{
+ion-label span {
   font-size: 15px;
   color: white;
 }
@@ -40,7 +40,25 @@ ion-card-header {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+
   ion-icon {
     font-size: 26px;
+  }
+}
+
+.call,
+.message,
+.chat {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  background-color: rgb(44, 44, 44);
+  border-radius: 10%;
+  padding: 10px;
+
+  span {
+    font-size: small;
   }
 }

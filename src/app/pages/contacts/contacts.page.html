@@ -13,9 +13,18 @@
       <img [src]="contact.image">
     </ion-card-header>
     <div class="icons">
-      <ion-icon name="call"></ion-icon>
-      <ion-icon name="mail"></ion-icon>
-      <ion-icon name="logo-whatsapp"></ion-icon>
+      <div class="call">
+        <ion-icon color="primary" name="call"></ion-icon>
+        <span>Chamar</span>
+      </div>
+      <div class="message">
+        <ion-icon color="danger" name="mail"></ion-icon>
+        <span>Mensagem</span>
+      </div>
+      <div class="chat">
+        <ion-icon color="success" name="logo-whatsapp"></ion-icon>
+        <span>Conversar</span>
+      </div>
     </div>
     <ion-card-content>
       <div class="contact-info">
